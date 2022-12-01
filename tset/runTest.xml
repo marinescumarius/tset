@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Tset-Exercise-Demo">
+
+    <test name="HomePageTests">
+        <classes>
+            <class name="marius.tset.com.test.VueAppHomePageTests" >
+                <methods>
+                    <include name="checkThePageTitle" />
+                    <include name="editTheBasePriceTest" />
+                    <include name="addAndRemoveComponents" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
