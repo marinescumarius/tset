@@ -6,17 +6,17 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import marius.tset.com.utils.webelement.WDUtlis;
 
-public class VueAppHomePageTests extends BaseTest{
+public class VueAppHomePageTests extends BaseTest {
 
-    @Test
+    @Test(description = "this test case validates the right page has been accessed")
     public void checkThePageTitle() {
 
         Assert.assertTrue((WDUtlis.getTitle(driver)).contains("Vite"), "The title does not contain Vite");
     }
 
-    @Test (description = "this test case covers flow scenario 1, modifying BasePrice and validating results")
+    @Test(description = "this test case covers flow scenario 1, modifying BasePrice and validating results")
     public void editTheBasePriceTest() {
-        VueAppHomePage homepage=new VueAppHomePage(driver);
+        VueAppHomePage homepage = new VueAppHomePage(driver);
         homepage.editTheBasePrice();
         Assert.assertTrue(homepage.getExpectedResult().getText().equals(homepage.calculateTheTotalValueOfComponents()), "The Expected Results does not match with the basePrice value");
     }

@@ -7,6 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import marius.tset.com.utils.webelement.WEUtils;
+
 import java.text.DecimalFormat;
 import java.util.List;
 
@@ -115,10 +116,9 @@ public class VueAppHomePage extends BasePage {
     public String calculateTheTotalValueOfComponents() {
         final DecimalFormat decfor = new DecimalFormat("0.00");
         List<WebElement> results = driver.findElements(By.xpath("//ul//div//div//div"));
-        double sum=0.00;
+        double sum = 0.00;
         for (WebElement el : results) {
-           // System.out.println(el.getText());
-            sum=sum+Double.parseDouble(el.getText());
+            sum = sum + Double.parseDouble(el.getText());
         }
         return decfor.format(sum);
     }

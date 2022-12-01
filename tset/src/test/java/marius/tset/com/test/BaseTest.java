@@ -27,10 +27,8 @@ public class BaseTest {
         try {
             driver.close();
             driver.quit();
-        } catch ( Exception e ) {
+        } catch (Exception e) {
             System.out.println("Unable to close/quit the driver");
         }
     }
-
-
 }
