@@ -34,8 +34,10 @@ public class VueAppHomePage extends BasePage {
     private WebElement internalSurcharge;
     @FindBy(xpath = "//span[text()='storage surcharge']")
     private WebElement storageSurcharge;
-    @FindBy(xpath = "//div[contains(@class, 'text-right mr-16 pr-2')]//span[contains(@class, 'font-bold')]")
+    @FindBy(xpath = "//div[contains (text(), 'Total: ')]")
     private WebElement expectedResult;
+    @FindBy(xpath = "//input[contains (@id, 'label-input')][not(contains(@id, 'ghost'))]")
+    private WebElement editComponentName;
 
     public WebElement getModifyStorageComponent() {
         return modifyStorageComponent;
